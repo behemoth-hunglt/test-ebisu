@@ -1,12 +1,1279 @@
-<!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Webpack App</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <script defer="defer" src="./index.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="origin-trial"
+          content="Agf9joSYM/qQvgBRf1/6Pd0y2rpqJUOITBm+3J7WlKjowlVNDgMM+oCXCWO0tt0jS+L1CrbyPv7hf1SHrDLRMAIAAABxeyJvcmlnaW4iOiJodHRwczovL25pbW8udHY6NDQzIiwiZmVhdHVyZSI6IlVucmVzdHJpY3RlZFNoYXJlZEFycmF5QnVmZmVyIiwiZXhwaXJ5IjoxNjc1Mjk1OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZX0=">
+
+
+    <link rel="dns-prefetch" href="https://wup.nimo.tv">
+    <link rel="dns-prefetch" href="https://tx.flv.nimo.tv">
+    <link rel="dns-prefetch" href="https://ws.flv.nimo.tv">
+    <link rel="dns-prefetch" href="https://al.flv.nimo.tv">
+    <link rel="dns-prefetch" href="https://tx.hls.nimo.tv">
+    <link rel="dns-prefetch" href="https://ws.hls.nimo.tv">
+    <link rel="dns-prefetch" href="https://al.hls.nimo.tv">
+    <link rel="dns-prefetch" href="https://tx-slice.nimo.tv">
+    <link rel="dns-prefetch" href="https://ws-slice.nimo.tv">
+    <link rel="dns-prefetch" href="https://al-slice.nimo.tv">
+    <link rel="dns-prefetch" href="https://sail-api-static.nimo.tv">
+    <link rel="dns-prefetch" href="https://sail-api.nimo.tv">
+    <link rel="preconnect" href="https://follow.nimo.tv" crossorigin="">
+    <link rel="dns-prefetch" href="https://follow.nimo.tv">
+    <link rel="dns-prefetch" href="https://api.nimo.tv">
+    <link rel="dns-prefetch" href="https://api-cf.nimo.tv">
+    <link rel="dns-prefetch" href="wss://tube.nimo.tv">
+    <link rel="dns-prefetch" href="https://guess.nimo.tv">
+    <link rel="dns-prefetch" href="https://img.nimo.tv">
+    <link rel="dns-prefetch" href="https://wspic.vod.nimo.tv">
+    <link rel="dns-prefetch" href="https://txpic.vod.nimo.tv">
+    <link rel="dns-prefetch" href="https:https://google-analytics.com">
+    <link rel="dns-prefetch" href="https://stats.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https:https://gstatic.com">
+    <link rel="dns-prefetch" href="https://metric.nimo.tv">
+    <link rel="dns-prefetch" href="https://ylog.nimo.tv">
+    <link rel="preconnect" href="https://follow-cf-dynamic.nimo.tv" crossorigin="">
+    <link rel="dns-prefetch" href="https://follow-cf-dynamic.nimo.tv">
+
+    <link rel="search" type="application/opensearchdescription+xml" href="/nms/search/opensearch.xml">
+
+
+    <script type="application/ld+json" id="searchScript">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https:https://nimo.tv/",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https:https://nimo.tv/search?kw={search_term_string}&label=total&from=searchBox",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://wup.nimo.tv" crossorigin="anonymous">
+    <link rel="preconnect" href="https://api.nimo.tv" crossorigin="anonymous">
+    <link rel="preconnect" href="https://api-cf.nimo.tv" crossorigin="anonymous">
+    <link rel="preconnect" href="wss://tube.nimo.tv" crossorigin="anonymous">
+    <link rel="preconnect" href="wss://wsapi-global.master.live" crossorigin="anonymous">
+
+
+    <title>Nimo TV - Professional Game Live Streaming Platform</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <link rel="apple-touch-icon"
+          href="https://nimo.tv/nms/images/apple-touch-icon.67a0300e238e3718b383b6b3b46fb3b8.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="https://nimo.tv/nms/images/favicon-32x32.4c79d7892d1f5a3bf7430e2e2f4bec35.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+          href="https://nimo.tv/nms/images/favicon-16x16.702cde8557235a09d89ceaea02b6e97d.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="https://nimo.tv/nms/c359fae6d149bed82c55cb67883bad9c.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="theme-color" content="#1e1e1e">
+    <meta name="google" content="notranslate">
+    <meta property="fb:app_id" content="161285164570410">
+    <script>
+        var G_defaultAvatarSrc = "https://nimo.tv/nms/images/avatar-60x60.7a14dec9afa720be41ba31efaa3aadd4.jpg";
+        var G_defaultScreenShot = "https://nimo.tv/nms/images/screen-285x160.0b1ba38197bcde68c8361783b402b0b3.jpg";
+        var nimo_base = {};
+        nimo_base.headerNav = "home";
+        nimo_base.hasMulTheme = "1";
+        ;
+        nimo_base.pathKeyword = "";
+    </script>
+
+    <script>
+        window.__NIMO_APP_DATA__ = {
+            country: "VN",
+            platform: "desktop",
+            lang: "1033",
+            theme: "2",
+            version: "home.spa.970d58388a"
+        };
+
+    </script>
+
+    <script>
+        !function () {
+            var e, t, n, i, a = {passive: !0, capture: !0}, r = new Date, o = function () {
+                i = [], t = -1, e = null, p(addEventListener)
+            }, c = function (i, a) {
+                e || (e = function (e) {
+                    return e && e.target instanceof HTMLElement ? {
+                        type: e.type,
+                        target: e.target.cloneNode(),
+                        cancelable: e.cancelable,
+                        timeStamp: e.timeStamp
+                    } : e
+                }(a), t = i, n = new Date, p(removeEventListener), u())
+            }, u = function () {
+                if (t >= 0 && t < n - r) {
+                    var a = {
+                        entryType: "first-input",
+                        name: e.type,
+                        target: e.target,
+                        cancelable: e.cancelable,
+                        startTime: e.timeStamp,
+                        processingStart: e.timeStamp + t
+                    };
+                    i.forEach((function (e) {
+                        e(a)
+                    })), i = []
+                }
+            }, l = function (e) {
+                if (e.cancelable) {
+                    var t = (e.timeStamp > 1e12 ? new Date : performance.now()) - e.timeStamp;
+                    "pointerdown" == e.type ? function (e, t) {
+                        var n = function () {
+                            c(e, t), r()
+                        }, i = function () {
+                            r()
+                        }, r = function () {
+                            removeEventListener("pointerup", n, a), removeEventListener("pointercancel", i, a)
+                        };
+                        addEventListener("pointerup", n, a), addEventListener("pointercancel", i, a)
+                    }(t, e) : c(t, e)
+                }
+            }, p = function (e) {
+                ["mousedown", "keydown", "touchstart", "pointerdown"].forEach((function (t) {
+                    return e(t, l, a)
+                }))
+            }, s = "hidden" === document.visibilityState ? 0 : 1 / 0;
+            addEventListener("visibilitychange", (function e(t) {
+                "hidden" === document.visibilityState && (s = t.timeStamp, removeEventListener("visibilitychange", e, !0))
+            }), !0);
+            o(), self.webVitals = {
+                firstInputPolyfill: function (e) {
+                    i.push(e), u()
+                }, resetFirstInputPolyfill: o, get firstHiddenTime() {
+                    return s
+                }
+            }
+        }();
+    </script>
+    <link href="https://nimo.tv/nms/home.spa.15770c6773506bec72ae.css" rel="stylesheet">
+    <script charset="utf-8" src="https://nimo.tv/nms/8853a.18af20f817e6759ec936.js"></script>
+    <script charset="utf-8" src="https://nimo.tv/nms/e80d5.caa1213868ef1d4bfa6a.js"></script>
+    <script charset="utf-8" src="https://nimo.tv/nms/b3657.b26c76d38faeae8f9402.js"></script>
+    <script charset="utf-8" src="https://nimo.tv/nms/e2f3a.05c5ca73eab46fd8b489.js"></script>
+    <script charset="utf-8" src="https://nimo.tv/nms/a4697.0455e7dc88a785d1809c.js"></script>
+    <link rel="prefetch" as="script" href="https://nimo.tv/nms/nimo-react-player.32fca26ecee6b40321a6.js">
+    <link rel="prefetch" as="script" href="https://nimo.tv/nms/room-player.9b8a5d43a1242f0dd852.js">
+    <script charset="utf-8" src="https://nimo.tv/nms/d6045.fab108833df803081174.js"></script>
+    <link rel="canonical" href="https:https://nimo.tv/">
+    <link rel="alternate" hreflang="x-default" href="https:https://nimo.tv/">
+    <link rel="alternate" hreflang="ar" href="https:https://nimo.tv/?_lang=1025">
+    <link rel="alternate" hreflang="zh" href="https:https://nimo.tv/?_lang=1028">
+    <link rel="alternate" hreflang="en" href="https:https://nimo.tv/?_lang=1033">
+    <link rel="alternate" hreflang="es" href="https:https://nimo.tv/?_lang=1034">
+    <link rel="alternate" hreflang="ja" href="https:https://nimo.tv/?_lang=1041">
+    <link rel="alternate" hreflang="pt" href="https:https://nimo.tv/?_lang=1046">
+    <link rel="alternate" hreflang="ru" href="https:https://nimo.tv/?_lang=1049">
+    <link rel="alternate" hreflang="th" href="https:https://nimo.tv/?_lang=1054">
+    <link rel="alternate" hreflang="tr" href="https:https://nimo.tv/?_lang=1055">
+    <link rel="alternate" hreflang="id" href="https:https://nimo.tv/?_lang=1057">
+    <link rel="alternate" hreflang="vi" href="https:https://nimo.tv/?_lang=1066">
+    <link rel="alternate" hreflang="hi" href="https:https://nimo.tv/?_lang=1081">
+    <link rel="alternate" hreflang="ms" href="https:https://nimo.tv/?_lang=1086">
+    <link rel="alternate" hreflang="fil" href="https:https://nimo.tv/?_lang=1124">
+    <link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.nimo.tv/">
+    <link rel="stylesheet" type="text/css" href="https://nimo.tv/nms/header.746b2cdf1e5e07bab109.css">
+    <script charset="utf-8" src="https://nimo.tv/nms/header.b1749bd28ae4ade7ab96.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://nimo.tv/nms/nimo-react-player.946919f4c8f68cf21a8d.css">
+    <script charset="utf-8" src="https://nimo.tv/nms/nimo-react-player.32fca26ecee6b40321a6.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://nimo.tv/nms/index.437ac5a8af48079b7fdb.css">
+    <script charset="utf-8" src="https://nimo.tv/nms/index.37a83cbeeba6785d503b.js"></script>
+    <script charset="utf-8" src="https://nimo.tv/nms/8ee50.fedb60f179f5ac37c065.js"></script>
+    <meta name="description"
+          content="Nimo TV is a leading game live streaming platform around the world. Watch the hottest PC games live stream, mobile games live stream, and esports live now."
+          data-react-helmet="true">
+    <link href="https:https://gstatic.com/firebasejs/5.5.6/firebase-app.js" rel="preload" as="script">
+    <link href="https:https://gstatic.com/firebasejs/5.5.6/firebase-messaging.js" rel="preload" as="script">
+    <script charset="utf-8" src="https://nimo.tv/nms/277c0.de76afacc0a0edb908c1.js"></script>
+    <script type="application/ld+json">{
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "url": "https:https://nimo.tv/",
+        "logo": "https://article.nimo.tv/nimo_logo.png",
+        "name": "Nimo TV",
+        "foundingDate": "2018-10-15",
+        "sameAs": [
+            "https:https://facebook.com/nimotvbrasilofficial",
+            "https:https://instagram.com/nimotv_brasil/ ",
+            "https:https://youtube.com/channel/UCM2KZf8aWOCf7cqz4lrRejg ",
+            "https://discord.gg/HndjeB5",
+            "https://twitter.com/NimoTV_Brasil",
+            "https://en.wikipedia.org/wiki/Huya_Live"
+        ]
+    }</script>
+    <link rel="stylesheet" type="text/css" href="https://nimo.tv/nms/float-navigator.7918f22f35283e811859.css">
+    <script charset="utf-8" src="https://nimo.tv/nms/float-navigator.441862757430b5e4865e.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://nimo.tv/nms/GlobalModal.f4d94264173aeb0e6e1c.css">
+    <script charset="utf-8" src="https://nimo.tv/nms/GlobalModal.987d13d41ca024d6d72b.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://nimo.tv/nms/index-card-list.486ab2c046611ae47191.css">
+    <script charset="utf-8" src="https://nimo.tv/nms/index-card-list.2c3e3604dce7e40523a0.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://nimo.tv/nms/daily-lottery-entry.e3b4f5a8cd9dd616b3b7.css">
+    <script charset="utf-8" src="https://nimo.tv/nms/daily-lottery-entry.f75a8fd017979092b03a.js"></script>
+    <script charset="utf-8" src="https://nimo.tv/nms/1a6a1.427a1160b52abaffbf27.js"></script>
 </head>
-<body style="background-color: #031019;">
-<div style="width: 60%" id="livestream"></div>
+
+<body class="nimo-theme-dark nimo-page-with-footer page-index sidebar-expand">
+
+<div class="nimo-bg-base"></div>
+<div id="root" class="nimo-root">
+    <div id="header" class="n-as-rel n-as-z2 n-as-h60px">
+        <div class="nimo-header  n-as-fixed n-as-tl n-as-w100 n-as-padh bc1 bsc1 n-as-bd-box n-fx-16 n-fx-bc">
+            <div class="nimo-header-main-menu n-fx0 n-as-h60px n-fx-bc">
+                <div class="nimo-header-logo-cont n-fx0 n-as-padh-xxs"><a href="/" target="_self"
+                                                                          rel="noopener noreferrer"
+                                                                          class="header-logo c8 n-as-block nm-logo"> </a>
+                </div>
+                <div class="menu-container c-hover1">
+                    <ul class="menu-left n-fx-bc nimo-menu nimo-menu-horizontal"><a target="_self" href="/"
+                                                                                    class="n-as-mrgh-md">
+                        <li data-id="home" class="c2 c-hover1 n-fx-cc curr c8 nimo-menu-item"><span
+                                class="header-title-text">Home</span>
+                            <svg class="header-title-icon c8">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path d="M0 0h24v24H0z"></path>
+                                    <path d="M12 3.332a1 1 0 01.514.143h0L19.94 7.93a.717.717 0 01.255.97h0l-.86 1.293a2 2 0 00-.335 1.11h0V17a2.99 2.99 0 01-.879 2.121A2.99 2.99 0 0116 20h0-8a2.99 2.99 0 01-2.121-.879A2.99 2.99 0 015 17h0v-5.697a2 2 0 00-.336-1.11h0l-.832-1.248a.717.717 0 01.184-.986h0l7.47-4.484A1 1 0 0112 3.332z"
+                                          stroke="currentColor" fill="currentColor" stroke-width="2"></path>
+                                    <path d="M8.95 11.49a.75.75 0 011.06-.04c.55.512 1.266.8 2.027.8a2.96 2.96 0 001.967-.745.75.75 0 11.992 1.125 4.46 4.46 0 01-2.959 1.12 4.462 4.462 0 01-3.048-1.2.75.75 0 01-.038-1.06z"
+                                          class="icon-stroke" fill="none" fill-rule="nonzero"></path>
+                                </g>
+                            </svg>
+                            <span class="bline bc3"></span></li>
+                    </a><a target="_self" href="/lives" class="n-as-mrgh-md">
+                        <li data-id="lives" class="c2 c-hover1 n-fx-cc nimo-menu-item"><span class="header-title-text">Live</span>
+                            <svg class="header-title-icon c-hover1 c3">
+                                <path d="M15 3a4 4 0 014 4v1l1.684-.561A1 1 0 0122 8.387v7.226a1 1 0 01-1.316.948L19 16v1a4 4 0 01-4 4H6a4 4 0 01-4-4V7a4 4 0 014-4h9zm0 2H6a2 2 0 00-1.995 1.85L4 7v10a2 2 0 001.85 1.995L6 19h9a2 2 0 001.995-1.85L17 17v-1a2 2 0 012.494-1.938l.138.04.368.123V9.774l-.368.123a2 2 0 01-2.627-1.752L17 8V7a2 2 0 00-1.85-1.995L15 5zM9 8.472a1 1 0 01.492.13l4.47 2.528a1 1 0 010 1.74l-4.47 2.528A1 1 0 018 14.528V9.472a1 1 0 011-1z"
+                                      fill="currentColor" fill-rule="nonzero"></path>
+                            </svg>
+                            <span class="bline bc3"></span></li>
+                    </a><a target="_self" href="/game/185" class="n-as-mrgh-md">
+                        <li data-id="liveshow" class="c2 c-hover1 n-fx-cc nimo-menu-item"><span
+                                class="header-title-text">Liveshow</span>
+                            <svg viewBox="0 0 25 25" xmlns="http:https://w3.org/2000/svg"
+                                 class="header-title-icon c-hover1 c3">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path d="M12.214 2.916c.48.074.56.153.61.252l1.419 2.876a4.75 4.75 0 0 0 3.576 2.598l3.174.461a.498.498 0 0 1 .277.853l-2.297 2.239a4.75 4.75 0 0 0-1.366 4.204l.542 3.161a.498.498 0 0 1-.725.527l-2.839-1.492a4.75 4.75 0 0 0-4.42 0l-2.839 1.492a.498.498 0 0 1-.725-.527l.542-3.16a4.75 4.75 0 0 0-1.366-4.205L3.48 9.956a.498.498 0 0 1 .277-.853l3.174-.46a4.75 4.75 0 0 0 3.576-2.6l1.42-2.875a.498.498 0 0 1 .287-.252Z"
+                                          stroke="currentColor" stroke-width="2"></path>
+                                    <path d="M15.193 10.974a.75.75 0 0 1 0 1.061l-.549.548.538.538a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1-.13-.888.703.703 0 0 1 .141-.199l1.06-1.06a.75.75 0 0 1 1.061 0Z"
+                                          fill="currentColor"></path>
+                                    <rect fill="currentColor" x="9" y="11" width="2" height="3" rx="1"></rect>
+                                </g>
+                            </svg>
+                            <span class="bline bc3"></span></li>
+                    </a><a target="_self" href="/games" class="gamesTabWrapper">
+                        <li data-id="games" class="has-arrow c2 c-hover1 nimo-menu-item">
+                            <div class="n-fx-cc"><span class="header-title-text">Game</span>
+                                <svg class="header-title-icon c-hover1 c3">
+                                    <g fill="currentColor" fill-rule="evenodd">
+                                        <path d="M14 2a2 2 0 012 2H5a1 1 0 00-1 1v10a1 1 0 001 1h1v2H4a2 2 0 01-2-2V4a2 2 0 012-2h10z"></path>
+                                        <path d="M20 6a2 2 0 012 2v12a2 2 0 01-2 2H10a2 2 0 01-2-2V8a2 2 0 012-2h10zm-1 2h-8a1 1 0 00-1 1v10a1 1 0 001 1h8a1 1 0 001-1V9a1 1 0 00-1-1zm-4 9a1 1 0 010 2h-3a1 1 0 010-2h3zm3-4a1 1 0 010 2h-6a1 1 0 010-2h6zm0-4a1 1 0 010 2h-6a1 1 0 010-2h6z"></path>
+                                    </g>
+                                </svg>
+                                <i class="nimo-icon nimo-icon-caret-down c-hover1"></i></div>
+                            <span class="bline bc3"></span></li>
+                    </a><a target="_self" href="/esports" class="n-as-mrgh-md">
+                        <li data-id="matches" class="c2 c-hover1 n-fx-cc nimo-menu-item"><span
+                                class="header-title-text">Esports</span>
+                            <svg class="header-title-icon c-hover1 c3">
+                                <path d="M16 2a2 2 0 012 2l-.001 1H21v4c0 1.047-1.028 2.3-3.083 3.757C17.541 14.425 15.903 15.84 13 17v2a1 1 0 001 1h1a1 1 0 010 2H9a1 1 0 010-2h1a1 1 0 001-1v-2c-2.903-1.161-4.541-2.575-4.917-4.241C4.028 11.299 3 10.047 3 9V5h2.999L6 4a2 2 0 012-2h8zm0 2H8l-.001 1H8v7.021l.004.086c.073.93 1.095 1.933 3.46 2.922l.535.217.258-.103c2.564-1.025 3.664-2.07 3.739-3.036L16 12V4zm3 3h-1v3.152l.18-.164.156-.152c.294-.294.493-.547.603-.745l.055-.1c.005-.007.006-.004.006.009V7zM5.999 7H5v2c0-.013.001-.016.006-.009l.055.1c.11.198.31.451.603.745l.157.152.178.163V7z"
+                                      fill="currentColor" fill-rule="evenodd"></path>
+                            </svg>
+                            <span class="bline bc3"></span></li>
+                    </a></ul>
+                </div>
+            </div>
+            <div class="nimo-header-minor-menu n-fx-ec n-as-h60px n-fx-basis-auto n-fx-f1">
+                <ul class="n-fx0 n-fx-bc n-as-padh-md nimo-menu nimo-menu-horizontal">
+                    <li class="n-as-mrgh n-fx-bc nimo-menu-item">
+                        <div id="header_searchBox">
+                            <div class="component_SearchBox bc4">
+                                <form name="searchForm" target="_self" action="https://nimo.tv/search"><span
+                                        class="nimo-search-lenovo-popover"><div class="nimo-icon search c2"></div><input
+                                        type="text" autocomplete="off" class="SearchBox_Elements_SearchInput c1"
+                                        value="" placeholder="Misthy"><input type="hidden" name="kw"
+                                                                             value="Misthy"><input type="hidden"
+                                                                                                   name="label"
+                                                                                                   value="total"></span>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-id="recharge" class="n-as-mrgh nimo-header-topup nimo-menu-item">
+                        <div class="n-as-h100 n-fx-cc n-as-pointer">
+                            <div class="n-as-bd bdc6 n-fx-cc topup-btn c11 n-as-rel">
+                                <div class="topup-icon"></div>
+                                Recharge
+                            </div>
+                        </div>
+                    </li>
+                    <li data-id="goLive" class="nimo-header-go-live nimo-menu-item"><a
+                            href="https://nimo.tv/download/streamer-pc" class="c2 golive-btn" target="_blank"
+                            rel="noopener noreferrer"><i class="go-live-icon"></i><span
+                            class="go-live-text">Go Live</span></a></li>
+                    <li data-id="app" class="nimo-header-download nimo-menu-item"><a
+                            href="https://nimo.tv/download/nimotv?_lang=1033" target="_blank" rel="noopener noreferrer"><i
+                            class="nimo-icon nimo-icon-h-download c-hover1 c3"></i></a></li>
+                    <li data-id="c-country" class="nimo-header-c-country-entry nimo-menu-item"><span><div
+                            class="CountryBadge c-hover1 c3 n-as-pointer"><span
+                            class="nimo-image n-fx0 nimo-header-country-flag"><picture><source
+                            srcset="https://img.nimo.tv/an/img/country_flag/vn.png/l0/img.webp" type="image/webp"><img
+                            src="https://img.nimo.tv/an/img/country_flag/vn.png/l0/img.png" alt="VN" class="loading"
+                            data-was-processed="true"></picture></span></div></span></li>
+                    <li data-id="lang" class="n-as-mrgh nimo-menu-item"><span><span class="red-dot"><i
+                            class="nimo-icon nimo-icon-h-more c-hover1 c3 n-as-pointer"></i></span></span></li>
+                </ul>
+                <div class="nimo-header-user-info n-fx0">
+                    <div class="nimo-btn-group reg-login-btn c8 bdc6 bc-hover3">
+                        <button type="button" class="nimo-btn bdc6 c-hover3  bc-hover3 bdc-hover2 nimo-btn-default">
+                            <span id="point">0 </span>point
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="n-fx-sn n-as-w100">
+        <div id="side-bar" class="n-fx0"></div>
+        <div class="n-fx1">
+            <div class="nimo-new-index-page n-as-rel n-as-z0 min-width-1060">
+                <div class="nimo_banner-old p-idx_wrap">
+                    <div class="p-idx_banner bc2 def_bg"><a class="p-idx_banner_box1"> </a>
+                        <div class="w n-fx-bn">
+                            <div class="w-play n-fx0">
+                                <div class="n-as-16x9">
+                                    <div id="nimo-player" class="nimo-index__player n-as-rnd nimo-player n-as-abs"
+                                         tabindex="-1">
+                                        <div id="livestream"></div>
+                                </div>
+                            </div>
+                            <ul class="w-nav n-fx0 n-fx-bc n-fx-col">
+                                <li class="nav-item n-fx0" data-play="0">
+                                    <div class="item-content">
+                                        <div class="item-content-inner"><span class="nimo-image item-img"><picture><source
+                                                srcset="https://img.nimo.tv/o/banner/DECD33AA4B29E54405AD2E5068DA6AFE_a675f4a1d7c2d39aaa8aaa22ded88b29.jpg/w256_l0/img.webp"
+                                                type="image/webp"><img
+                                                src="https://img.nimo.tv/o/banner/DECD33AA4B29E54405AD2E5068DA6AFE_a675f4a1d7c2d39aaa8aaa22ded88b29.jpg/w256_l0/img.jpg"
+                                                alt="Nimo TV" class="loaded" data-was-processed="true"></picture></span>
+                                            <div class="item-mask"></div>
+                                            <div class="cnt-info">
+                                                <div class="cnt-room-name">Toi vui ve nha a e !!</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <i class="nimo-icon nimo-icon-banner-arrow-left"></i></li>
+                                <li class="nav-item n-fx0" data-play="0">
+                                    <div class="item-content">
+                                        <div class="item-content-inner"><span class="nimo-image item-img"><picture><source
+                                                srcset="https://img.nimo.tv/o/banner/60E5772B3C5D3CAA3EAF2341EE1044E6_d1e6b53e9fe1cc81d373977e2db84d00.jpg/w256_l0/img.webp"
+                                                type="image/webp"><img
+                                                src="https://img.nimo.tv/o/banner/60E5772B3C5D3CAA3EAF2341EE1044E6_d1e6b53e9fe1cc81d373977e2db84d00.jpg/w256_l0/img.jpg"
+                                                alt="Nimo TV" class="loaded" data-was-processed="true"></picture></span>
+                                            <div class="item-mask"></div>
+                                            <div class="cnt-info">
+                                                <div class="cnt-room-name">[MISTHY] Ohiyooo~ Misthy Desu</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <i class="nimo-icon nimo-icon-banner-arrow-left"></i></li>
+                                <li class="nav-item n-fx0" data-play="0">
+                                    <div class="item-content">
+                                        <div class="item-content-inner"><span class="nimo-image item-img"><picture><source
+                                                srcset="https://img.nimo.tv/o/banner/C193EE4E6C40A31B6C5A48311DB1D878_93348ccea5deeafd8b5d35848640ee90.jpeg/w256_l0/img.webp"
+                                                type="image/webp"><img
+                                                src="https://img.nimo.tv/o/banner/C193EE4E6C40A31B6C5A48311DB1D878_93348ccea5deeafd8b5d35848640ee90.jpeg/w256_l0/img.jpeg"
+                                                alt="Nimo TV" class="loaded" data-was-processed="true"></picture></span>
+                                            <div class="item-mask"></div>
+                                        </div>
+                                    </div>
+                                    <i class="nimo-icon nimo-icon-banner-arrow-left"></i></li>
+                                <li class="nav-item n-fx0" data-play="0">
+                                    <div class="item-content">
+                                        <div class="item-content-inner"><span class="nimo-image item-img"><picture><source
+                                                srcset="https://img.nimo.tv/o/banner/A6E816516DB948F489DBB68E559C1EC1_2643305e0abf620a9f9e0c571c951291.jpg/w256_l0/img.webp"
+                                                type="image/webp"><img
+                                                src="https://img.nimo.tv/o/banner/A6E816516DB948F489DBB68E559C1EC1_2643305e0abf620a9f9e0c571c951291.jpg/w256_l0/img.jpg"
+                                                alt="Nimo TV" class="loaded" data-was-processed="true"></picture></span>
+                                            <div class="item-mask"></div>
+                                            <div class="cnt-info">
+                                                <div class="cnt-room-name">Quang... Ước Bụt!!!</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <i class="nimo-icon nimo-icon-banner-arrow-left"></i></li>
+                                <li class="nav-item n-fx0" data-play="0">
+                                    <div class="item-content">
+                                        <div class="item-content-inner"><span class="nimo-image item-img"><picture><source
+                                                srcset="https://img.nimo.tv/o/banner/8778E5426CA820DDE88F94B2FED994F_c35910b2a2edf9784277994722ba2945.jpg/w256_l0/img.webp"
+                                                type="image/webp"><img
+                                                src="https://img.nimo.tv/o/banner/8778E5426CA820DDE88F94B2FED994F_c35910b2a2edf9784277994722ba2945.jpg/w256_l0/img.jpg"
+                                                alt="Nimo TV" class="loaded" data-was-processed="true"></picture></span>
+                                            <div class="item-mask"></div>
+                                        </div>
+                                    </div>
+                                    <i class="nimo-icon nimo-icon-banner-arrow-left"></i></li>
+                                <li class="nav-item n-fx0" data-play="1">
+                                    <div class="item-content">
+                                        <div class="item-content-inner"><span class="nimo-image item-img"><picture><source
+                                                srcset="https://img.nimo.tv/o/banner/8AA489A93C89FA271607768A3F497074_fe6db026d34222a0a7f5d00ca57b3767.jpg/w256_l0/img.webp"
+                                                type="image/webp"><img
+                                                src="https://img.nimo.tv/o/banner/8AA489A93C89FA271607768A3F497074_fe6db026d34222a0a7f5d00ca57b3767.jpg/w256_l0/img.jpg"
+                                                alt="Nimo TV" class="loaded" data-was-processed="true"></picture></span>
+                                            <div class="item-mask"></div>
+                                        </div>
+                                    </div>
+                                    <i class="nimo-icon nimo-icon-banner-arrow-left"></i></li>
+                            </ul>
+                        </div>
+                        <div class="n-as-hidden w n-fx-bn">
+                            <div class="n-as-con">
+                                <div class="n-fx-sn" style="direction: ltr;">
+                                    <div class="n-as-rnd n-as-of-hidden" style="width: 85%;">
+                                        <div class="n-as-16x9">
+                                            <div id="nimo-player-puppet"
+                                                 class="nimo-player n-as-abs n-as-full n-sk-black">
+                                                <div class="n-as-abs n-as-cc n-as-z0" style="
+              width: 206px;
+              height: 77px;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtIAAADGCAMAAADIbJc8AAAApVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+4/eNVAAAANnRSTlMAEPxRNdUYDTGDBlvaxbv385PvCaKfJ9/qRQL7zxTlciIceMBsYaeWh0vKrI1nLbE6tj9Um37x0ZaGAAAVFklEQVR42uzd63aiMBQF4COtWkFFwQKCFS94v7e63//RZmZ1LhZQCTgSZs73u3axdBNCcpIQY+zOqpud7Sn9pl8hxopvsG7hJ31dJcaKbb/ycKZuEWPF5X40EOJwpllhVQMbUTb3PVgxDecGYrWJseJ56ei4QB8SYwWzGOOKETFWJOamjKvGxFhxVGoObjCIsaLYHnXcphJjhdA9AOBIs3+EOunhE3c82D+gNOojqR4xJjlr1kJyU2JMau87BSJqxJi8VG0JQRoxJquSb0PYMzEmp8HaQAolYkxGz1MPaTjEmHzcpwYu4hIPVjRmUEcy/egfHokxuVTmBpLpaarqcG0pk1ukuP8SZfdO30Xi/0SMyWPRRDL6zKIf3hDG62mZNCLF/Rc5pzf6tEeIwnV4TBLDmoNkyhOVfpkgxONIMwm4VtBUkEyzS2fmCAuIsQcxrfcnbbIJAt8fjU612ny9bs+Ox+mh10JC+uuWvlgh4rCez2un02jk+0GwmWgf71ueUGT3tt3MGg6ycmoVCukhEaP36u+5S8LuozJZGbiDemBShI7k9KbPwyEsq+qkqeAexk8uRQ0hqDfiHXtZBtbMwD1402eK1YUwb/VOjKXyslNwD8Z6SBcESGO5oEKpvOwtfhHI32Cl4B5sv0oXrZHOsjgt9f7Yx3f6eGMSy5E513EPyw+XrjggrWkxdoO0mvjN2RDLTdfGHSirPV1XR2pGEQLy1MK5FTfUOTHbuINWe0A3qB4yOEg/+KEp+GrMmc7FoIfs+qMS3WQhE6dLUnvREfZK7PEWBjLraSolsEA2nk8SU3uIKthgzT8hUJCR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');
+            "></div>
+                                            </div>
+                                        </div>
+                                        <div class="n-as-w100 n-fx-bc" style="height: 40px;">
+                                            <div class="n-fx-bc">
+                                                <div class="n-sk n-as-30px n-as-circle n-as-mrg"></div>
+                                                <div class="n-sk n-as-30px n-as-circle n-as-mrg"></div>
+                                            </div>
+                                            <div class="n-fx-bc">
+                                                <div class="n-sk n-sk-btn-sm n-as-rnd n-as-mrg"></div>
+                                                <div class="n-sk n-sk-btn-sm n-as-rnd n-as-mrg"></div>
+                                                <div class="n-sk n-sk-btn-sm n-as-rnd n-as-mrg n-as-w100px"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="n-fx-col n-fx-bc" style="width: calc(15% - 12px); margin-left: 12px;">
+
+                                        <li class="n-sk n-as-rnd n-as-w100 n-fx1 n-as-mrgb"></li>
+
+                                        <li class="n-sk n-as-rnd n-as-w100 n-fx1 n-as-mrgb"></li>
+
+                                        <li class="n-sk n-as-rnd n-as-w100 n-fx1 n-as-mrgb"></li>
+
+                                        <li class="n-sk n-as-rnd n-as-w100 n-fx1 n-as-mrgb"></li>
+
+                                        <li class="n-sk n-as-rnd n-as-w100 n-fx1 n-as-mrgb"></li>
+
+                                        <li class="n-sk n-as-rnd n-as-w100 n-fx1"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-idx_cate-lives n-as-mrgh-lg n-as-mrgb-lg nimo-hot-lives">
+                    <div class="c-title_list-has-icon n-fx-sc n-as-mrgb-md">
+                        <div class="text n-as-fs30 n-as-fw"><a class="c1 c-hover2" href="/lives" title="Hot"><h2
+                                class="n-as-fs30">Hot</h2>
+                            <div class="n-as-mrgh-md n-as-fs16 n-fx-cc n-as-pointer n-fx-sr0 more-container more c2 c-hover2 n-fx-sc">
+                                More<i class="nimo-icon nimo-icon-arrow-right i-more"></i></div>
+                        </a></div>
+                    </div>
+                    <div class="content c-list_cate-lives n-fx-grid-356 n-fx-gap-md"><span target="_self"
+                                                                                           _stop_event="1"
+                                                                                           class="nimo-rc n-as-mrgb-md nimo-rc-full"><div
+                            class="nimo-card nimo-card-hoverable n-as-z0 n-as-rel"><div
+                            class="nimo-card-cover n-as-16x9"><div><div class="nimo-rc_cover-wrap"><span
+                            class="nimo-image nimo-rc_cover lazyload"><picture><source
+                            data-srcset="https://img.nimo.tv/o/banner/DECD33AA4B29E54405AD2E5068DA6AFE_a675f4a1d7c2d39aaa8aaa22ded88b29.jpg/w800_l0/img.webp"
+                            type="image/webp"
+                            srcset="https://img.nimo.tv/o/banner/DECD33AA4B29E54405AD2E5068DA6AFE_a675f4a1d7c2d39aaa8aaa22ded88b29.jpg/w800_l0/img.webp"><img
+                            src="https://img.nimo.tv/o/banner/DECD33AA4B29E54405AD2E5068DA6AFE_a675f4a1d7c2d39aaa8aaa22ded88b29.jpg/w800_l0/img.jpg"
+                            data-src="https://img.nimo.tv/o/banner/DECD33AA4B29E54405AD2E5068DA6AFE_a675f4a1d7c2d39aaa8aaa22ded88b29.jpg/w800_l0/img.jpg"
+                            alt="League of Legends" class="loaded" data-was-processed="true"></picture></span><span
+                            class="nimo-rc_tag" style="display: block;">League of Legends</span><div
+                            class="nimo-rc_mask"></div><div class="nimo-icon-circle"><i
+                            class="nimo-icon nimo-icon-play-btn"></i></div></div></div></div><div
+                            class="nimo-card-body"><div><div
+                            class="nimo-live-preview n-as-abs n-as-full n-as-rnd n-as-of-hidden"><div class="n-as-16x9"><a
+                            href="/thaygiaoba"><div id="home-hot-2272219" class="nimo-player n-as-full"></div></a></div></div><div
+                            class="nimo-rc_meta bc1"><div class="n-fx-sc n-as-w100"><span
+                            class="nimo-image nimo-avatar nimo-avatar-lg nimo-avatar-circle nimo-avatar-image"><picture><source
+                            data-srcset="https://img.nimo.tv/t/1629511905172/202111241637776500538_1629511905172_avatar.png/w120_l0/img.webp"
+                            type="image/webp"
+                            srcset="https://img.nimo.tv/t/1629511905172/202111241637776500538_1629511905172_avatar.png/w120_l0/img.webp"><img
+                            src="https://img.nimo.tv/t/1629511905172/202111241637776500538_1629511905172_avatar.png/w120_l0/img.png"
+                            data-src="https://img.nimo.tv/t/1629511905172/202111241637776500538_1629511905172_avatar.png/w120_l0/img.png"
+                            alt="Thầy Giáo Ba" class="loaded" data-was-processed="true"></picture></span><div
+                            class="nimo-rc_meta__info n-fx-col n-as-padh c2 n-as-text-over"><a class="controlZindex"
+                                                                                               href="/thaygiaoba"><h3
+                            class="nimo-rc_meta__title c1 c-hover4">Toi vui ve nha a e !!</h3></a><a
+                            class="controlZindexMargin" href="/thaygiaoba"><span
+                            class="nimo-rc_meta__nick-name text c-hover4"
+                            title="Thầy Giáo Ba"><h4>Thầy Giáo Ba</h4></span></a><div
+                            class="n-fx-bc n-as-w100 n-as-fs12"><div
+                            class="nimo-rc_meta__labels c2 n-fx-wrap n-fx-sc"><a
+                            class="nimo-rc_meta__labels-item bdc1 n-as-inline-block n-as-fs12 bc10 c2"
+                            data-label-id="15" data-label-pos="1" data-game-id="10"
+                            href="https://nimo.tv/game/10?label=15"><span class="label n-as-inline-block">Bet</span></a></div><div
+                            class="nimo-rc_meta__audience"><i class="nimo-icon nimo-icon-audience"></i><span
+                            class="text">52.4k</span></div></div></div></div></div></div></div></div></span><span
+                            target="_self" _stop_event="1" class="nimo-rc n-as-mrgb-md nimo-rc-full"><div
+                            class="nimo-card nimo-card-hoverable n-as-z0 n-as-rel"><div
+                            class="nimo-card-cover n-as-16x9"><div><div class="nimo-rc_cover-wrap"><span
+                            class="nimo-image nimo-rc_cover lazyload"><picture><source
+                            data-srcset="https://img.nimo.tv/o/banner/A6E816516DB948F489DBB68E559C1EC1_2643305e0abf620a9f9e0c571c951291.jpg/w800_l0/img.webp"
+                            type="image/webp"
+                            srcset="https://img.nimo.tv/o/banner/A6E816516DB948F489DBB68E559C1EC1_2643305e0abf620a9f9e0c571c951291.jpg/w800_l0/img.webp"><img
+                            src="https://img.nimo.tv/o/banner/A6E816516DB948F489DBB68E559C1EC1_2643305e0abf620a9f9e0c571c951291.jpg/w800_l0/img.jpg"
+                            data-src="https://img.nimo.tv/o/banner/A6E816516DB948F489DBB68E559C1EC1_2643305e0abf620a9f9e0c571c951291.jpg/w800_l0/img.jpg"
+                            alt="FIFA" class="loaded" data-was-processed="true"></picture></span><span
+                            class="nimo-rc_tag" style="display: block;">FIFA</span><div class="nimo-rc_mask"></div><div
+                            class="nimo-icon-circle"><i
+                            class="nimo-icon nimo-icon-play-btn"></i></div></div></div></div><div
+                            class="nimo-card-body"><div><div
+                            class="nimo-live-preview n-as-abs n-as-full n-as-rnd n-as-of-hidden"><div class="n-as-16x9"><a
+                            href="/vodkaquang"><div id="home-hot-93349645"
+                                                    class="nimo-player n-as-full"></div></a></div></div><div
+                            class="nimo-rc_meta bc1"><div class="n-fx-sc n-as-w100"><span
+                            class="nimo-image nimo-avatar nimo-avatar-lg nimo-avatar-circle nimo-avatar-image"><picture><source
+                            data-srcset="https://img.nimo.tv/t/1639520759639/202112011638379804862_1639520759639_avatar.png/w120_l0/img.webp"
+                            type="image/webp"
+                            srcset="https://img.nimo.tv/t/1639520759639/202112011638379804862_1639520759639_avatar.png/w120_l0/img.webp"><img
+                            src="https://img.nimo.tv/t/1639520759639/202112011638379804862_1639520759639_avatar.png/w120_l0/img.png"
+                            data-src="https://img.nimo.tv/t/1639520759639/202112011638379804862_1639520759639_avatar.png/w120_l0/img.png"
+                            alt="Vodka Quang" class="loaded" data-was-processed="true"></picture></span><div
+                            class="nimo-rc_meta__info n-fx-col n-as-padh c2 n-as-text-over"><a class="controlZindex"
+                                                                                               href="/vodkaquang"><h3
+                            class="nimo-rc_meta__title c1 c-hover4">Quang... Ước Bụt!!!</h3></a><a
+                            class="controlZindexMargin" href="/vodkaquang"><span
+                            class="nimo-rc_meta__nick-name text c-hover4"
+                            title="Vodka Quang"><h4>Vodka Quang</h4></span></a><div class="n-fx-bc n-as-w100 n-as-fs12"><div
+                            class="nimo-rc_meta__labels c2 n-fx-wrap n-fx-sc"><a
+                            class="nimo-rc_meta__labels-item bdc1 n-as-inline-block n-as-fs12 bc10 c2"
+                            data-label-id="15" data-label-pos="1" data-game-id="544"
+                            href="https://nimo.tv/game/544?label=15"><span
+                            class="label n-as-inline-block">Bet</span></a></div><div class="nimo-rc_meta__audience"><i
+                            class="nimo-icon nimo-icon-audience"></i><span
+                            class="text">6.5k</span></div></div></div></div></div></div></div></div></span><span
+                            target="_self" _stop_event="1" class="nimo-rc n-as-mrgb-md nimo-rc-full"><div
+                            class="nimo-card nimo-card-hoverable n-as-z0 n-as-rel"><div
+                            class="nimo-card-cover n-as-16x9"><div><div class="nimo-rc_cover-wrap"><span
+                            class="nimo-image nimo-rc_cover lazyload"><picture><source
+                            data-srcset="https://img.nimo.tv/o/banner/665A370DE3B89A7A64CE38B6EE5CEF0E_4e8f526624c3f9c81468951286f1d250.jpg/w800_l0/img.webp"
+                            type="image/webp"
+                            srcset="https://img.nimo.tv/o/banner/665A370DE3B89A7A64CE38B6EE5CEF0E_4e8f526624c3f9c81468951286f1d250.jpg/w800_l0/img.webp"><img
+                            src="https://img.nimo.tv/o/banner/665A370DE3B89A7A64CE38B6EE5CEF0E_4e8f526624c3f9c81468951286f1d250.jpg/w800_l0/img.jpg"
+                            data-src="https://img.nimo.tv/o/banner/665A370DE3B89A7A64CE38B6EE5CEF0E_4e8f526624c3f9c81468951286f1d250.jpg/w800_l0/img.jpg"
+                            alt="Just Chatting" class="loaded" data-was-processed="true"></picture></span><span
+                            class="nimo-rc_tag" style="display: block;">Just Chatting</span><div
+                            class="nimo-rc_mask"></div><div class="nimo-icon-circle"><i
+                            class="nimo-icon nimo-icon-play-btn"></i></div></div></div></div><div
+                            class="nimo-card-body"><div><div
+                            class="nimo-live-preview n-as-abs n-as-full n-as-rnd n-as-of-hidden"><div class="n-as-16x9"><a
+                            href="/jangbii"><div id="home-hot-9851779"
+                                                 class="nimo-player n-as-full"></div></a></div></div><div
+                            class="nimo-rc_meta bc1"><div class="n-fx-sc n-as-w100"><span
+                            class="nimo-image nimo-avatar nimo-avatar-lg nimo-avatar-circle nimo-avatar-image"><picture><source
+                            data-srcset="https://img.nimo.tv/t/1599518290577/202111071636313987816_1599518290577_avatar.png/w120_l0/img.webp"
+                            type="image/webp"
+                            srcset="https://img.nimo.tv/t/1599518290577/202111071636313987816_1599518290577_avatar.png/w120_l0/img.webp"><img
+                            src="https://img.nimo.tv/t/1599518290577/202111071636313987816_1599518290577_avatar.png/w120_l0/img.png"
+                            data-src="https://img.nimo.tv/t/1599518290577/202111071636313987816_1599518290577_avatar.png/w120_l0/img.png"
+                            alt="Jangbii" class="loaded" data-was-processed="true"></picture></span><div
+                            class="nimo-rc_meta__info n-fx-col n-as-padh c2 n-as-text-over"><a class="controlZindex"
+                                                                                               href="/jangbii"><h3
+                            class="nimo-rc_meta__title c1 c-hover4">Uoc But -_-</h3></a><a class="controlZindexMargin"
+                                                                                           href="/jangbii"><span
+                            class="nimo-rc_meta__nick-name text c-hover4" title="Jangbii"><h4>Jangbii</h4></span></a><div
+                            class="n-fx-bc n-as-w100 n-as-fs12"><div class="nimo-rc_meta__audience"><i
+                            class="nimo-icon nimo-icon-audience"></i><span
+                            class="text">4.8k</span></div></div></div></div></div></div></div></div></span><span
+                            target="_self" _stop_event="1" class="nimo-rc n-as-mrgb-md nimo-rc-full"><div
+                            class="nimo-card nimo-card-hoverable n-as-z0 n-as-rel"><div
+                            class="nimo-card-cover n-as-16x9"><div><div class="nimo-rc_cover-wrap"><span
+                            class="nimo-image nimo-rc_cover lazyload"><picture><source
+                            data-srcset="https://img.nimo.tv/c/202212211671606971465_1639516919623_cover.jpg/w800_h452_a1_l0/img.webp"
+                            type="image/webp"
+                            srcset="https://img.nimo.tv/c/202212211671606971465_1639516919623_cover.jpg/w800_h452_a1_l0/img.webp"><img
+                            src="https://img.nimo.tv/c/202212211671606971465_1639516919623_cover.jpg/w800_h452_a1_l0/img.jpg"
+                            data-src="https://img.nimo.tv/c/202212211671606971465_1639516919623_cover.jpg/w800_h452_a1_l0/img.jpg"
+                            alt="Liveshow" class="loaded" data-was-processed="true"></picture></span><span
+                            class="nimo-rc_tag" style="display: block;">Liveshow</span><div class="nimo-rc_mask"></div><div
+                            class="nimo-icon-circle"><i
+                            class="nimo-icon nimo-icon-play-btn"></i></div></div></div></div><div
+                            class="nimo-card-body"><div><div
+                            class="nimo-live-preview n-as-abs n-as-full n-as-rnd n-as-of-hidden"><div class="n-as-16x9"><a
+                            href="/live/493880602"><div id="home-hot-493880602" class="nimo-player n-as-full"></div></a></div></div><div
+                            class="nimo-rc_meta bc1"><div class="n-fx-sc n-as-w100"><span
+                            class="nimo-image nimo-avatar nimo-avatar-lg nimo-avatar-circle nimo-avatar-image"><picture><source
+                            data-srcset="https://img.nimo.tv/t/1639516919623/202204081649431185370_1639516919623_avatar.png/w120_l0/img.webp"
+                            type="image/webp"
+                            srcset="https://img.nimo.tv/t/1639516919623/202204081649431185370_1639516919623_avatar.png/w120_l0/img.webp"><img
+                            src="https://img.nimo.tv/t/1639516919623/202204081649431185370_1639516919623_avatar.png/w120_l0/img.png"
+                            data-src="https://img.nimo.tv/t/1639516919623/202204081649431185370_1639516919623_avatar.png/w120_l0/img.png"
+                            alt="Yoo iuu" class="loaded" data-was-processed="true"></picture></span><div
+                            class="nimo-rc_meta__info n-fx-col n-as-padh c2 n-as-text-over"><a class="controlZindex"
+                                                                                               href="/live/493880602"><h3
+                            class="nimo-rc_meta__title c1 c-hover4">Ước bụt 🥺</h3></a><a class="controlZindexMargin"
+                                                                                         href="/live/493880602"><span
+                            class="nimo-rc_meta__nick-name text c-hover4" title="Yoo iuu"><h4>Yoo iuu</h4></span></a><div
+                            class="n-fx-bc n-as-w100 n-as-fs12"><div
+                            class="nimo-rc_meta__labels c2 n-fx-wrap n-fx-sc"><a
+                            class="nimo-rc_meta__labels-item bdc1 n-as-inline-block n-as-fs12 bc10 c2" data-label-id="7"
+                            data-label-pos="1" data-game-id="185" href="https://nimo.tv/game/185?label=7"><span
+                            class="label n-as-inline-block">PK</span></a></div><div class="nimo-rc_meta__audience"><i
+                            class="nimo-icon nimo-icon-audience"></i><span
+                            class="text">487</span></div></div></div></div></div></div></div></div></span><span
+                            target="_self" _stop_event="1" class="nimo-rc n-as-mrgb-md nimo-rc-full"><div
+                            class="nimo-card nimo-card-hoverable n-as-z0 n-as-rel"><div
+                            class="nimo-card-cover n-as-16x9"><div><div class="nimo-rc_cover-wrap"><span
+                            class="nimo-image nimo-rc_cover lazyload"><picture><source
+                            data-srcset="https://img.nimo.tv/o/banner/60E5772B3C5D3CAA3EAF2341EE1044E6_d1e6b53e9fe1cc81d373977e2db84d00.jpg/w800_l0/img.webp"
+                            type="image/webp"
+                            srcset="https://img.nimo.tv/o/banner/60E5772B3C5D3CAA3EAF2341EE1044E6_d1e6b53e9fe1cc81d373977e2db84d00.jpg/w800_l0/img.webp"><img
+                            src="https://img.nimo.tv/o/banner/60E5772B3C5D3CAA3EAF2341EE1044E6_d1e6b53e9fe1cc81d373977e2db84d00.jpg/w800_l0/img.jpg"
+                            data-src="https://img.nimo.tv/o/banner/60E5772B3C5D3CAA3EAF2341EE1044E6_d1e6b53e9fe1cc81d373977e2db84d00.jpg/w800_l0/img.jpg"
+                            alt="GTA5" class="loaded" data-was-processed="true"></picture></span><span
+                            class="nimo-rc_tag" style="display: block;">GTA5</span><div class="nimo-rc_mask"></div><div
+                            class="nimo-icon-circle"><i
+                            class="nimo-icon nimo-icon-play-btn"></i></div></div></div></div><div
+                            class="nimo-card-body"><div><div
+                            class="nimo-live-preview n-as-abs n-as-full n-as-rnd n-as-of-hidden"><div class="n-as-16x9"><a
+                            href="/misthy"><div id="home-hot-9389161"
+                                                class="nimo-player n-as-full"></div></a></div></div><div
+                            class="nimo-rc_meta bc1"><div class="n-fx-sc n-as-w100"><span
+                            class="nimo-image nimo-avatar nimo-avatar-lg nimo-avatar-circle nimo-avatar-image"><picture><source
+                            data-srcset="https://img.nimo.tv/t/1639511734795/202106081623144614350_1639511734795_avatar.png/w120_l0/img.webp"
+                            type="image/webp"
+                            srcset="https://img.nimo.tv/t/1639511734795/202106081623144614350_1639511734795_avatar.png/w120_l0/img.webp"><img
+                            src="https://img.nimo.tv/t/1639511734795/202106081623144614350_1639511734795_avatar.png/w120_l0/img.png"
+                            data-src="https://img.nimo.tv/t/1639511734795/202106081623144614350_1639511734795_avatar.png/w120_l0/img.png"
+                            alt="Misthy" class="loaded" data-was-processed="true"></picture></span><div
+                            class="nimo-rc_meta__info n-fx-col n-as-padh c2 n-as-text-over"><a class="controlZindex"
+                                                                                               href="/misthy"><h3
+                            class="nimo-rc_meta__title c1 c-hover4">[MISTHY] Ohiyooo~ Misthy Desu</h3></a><a
+                            class="controlZindexMargin" href="/misthy"><span
+                            class="nimo-rc_meta__nick-name text c-hover4" title="Misthy"><h4>Misthy</h4></span></a><div
+                            class="n-fx-bc n-as-w100 n-as-fs12"><div class="nimo-rc_meta__audience"><i
+                            class="nimo-icon nimo-icon-audience"></i><span
+                            class="text">13.4k</span></div></div></div></div></div></div></div></div></span><span
+                            target="_self" _stop_event="1" class="nimo-rc n-as-mrgb-md nimo-rc-full"><div
+                            class="nimo-card nimo-card-hoverable n-as-z0 n-as-rel"><div
+                            class="nimo-card-cover n-as-16x9"><div><div class="nimo-rc_cover-wrap"><span
+                            class="nimo-image nimo-rc_cover lazyload"><picture><img
+                            src="https://txpic.vod.nimo.tv/su1599518165043r980037312f57f8c8bf720b46a53d089f_338_190.jpg?t=1672157040000"
+                            data-src="https://txpic.vod.nimo.tv/su1599518165043r980037312f57f8c8bf720b46a53d089f_338_190.jpg?t=1672157040000"
+                            alt="Genshin Impact" class="loaded" data-was-processed="true"></picture></span><span
+                            class="nimo-rc_tag" style="display: block;">Genshin Impact</span><div
+                            class="nimo-rc_mask"></div><div class="nimo-icon-circle"><i
+                            class="nimo-icon nimo-icon-play-btn"></i></div></div></div></div><div
+                            class="nimo-card-body"><div><div
+                            class="nimo-live-preview n-as-abs n-as-full n-as-rnd n-as-of-hidden"><div class="n-as-16x9"><a
+                            href="/gemmint"><div id="home-hot-94023316"
+                                                 class="nimo-player n-as-full"></div></a></div></div><div
+                            class="nimo-rc_meta bc1"><div class="n-fx-sc n-as-w100"><span
+                            class="nimo-image nimo-avatar nimo-avatar-lg nimo-avatar-circle nimo-avatar-image"><picture><source
+                            data-srcset="https://img.nimo.tv/t/1599518165043/202212261672018667858_1599518165043_avatar.png/w120_l0/img.webp"
+                            type="image/webp"
+                            srcset="https://img.nimo.tv/t/1599518165043/202212261672018667858_1599518165043_avatar.png/w120_l0/img.webp"><img
+                            src="https://img.nimo.tv/t/1599518165043/202212261672018667858_1599518165043_avatar.png/w120_l0/img.png"
+                            data-src="https://img.nimo.tv/t/1599518165043/202212261672018667858_1599518165043_avatar.png/w120_l0/img.png"
+                            alt="[GEM] Mint ฅ" class="loaded" data-was-processed="true"></picture></span><div
+                            class="nimo-rc_meta__info n-fx-col n-as-padh c2 n-as-text-over"><a class="controlZindex"
+                                                                                               href="/gemmint"><h3
+                            class="nimo-rc_meta__title c1 c-hover4">Xa bờ quá 🥹</h3></a><a class="controlZindexMargin"
+                                                                                           href="/gemmint"><span
+                            class="nimo-rc_meta__nick-name text c-hover4"
+                            title="[GEM] Mint ฅ"><h4>[GEM] Mint ฅ</h4></span></a><div
+                            class="n-fx-bc n-as-w100 n-as-fs12"><div class="nimo-rc_meta__audience"><i
+                            class="nimo-icon nimo-icon-audience"></i><span
+                            class="text">369</span></div></div></div></div></div></div></div></div></span><span
+                            target="_self" _stop_event="1" class="nimo-rc n-as-mrgb-md nimo-rc-full"><div
+                            class="nimo-card nimo-card-hoverable n-as-z0 n-as-rel"><div
+                            class="nimo-card-cover n-as-16x9"><div><div class="nimo-rc_cover-wrap"><span
+                            class="nimo-image nimo-rc_cover lazyload"><picture><source
+                            data-srcset="https://img.nimo.tv/o/banner/57DB36743275E0811E46876845F5B22E_9f53772106cc01c4e61d39e5291ef847.jpg/w800_l0/img.webp"
+                            type="image/webp"
+                            srcset="https://img.nimo.tv/o/banner/57DB36743275E0811E46876845F5B22E_9f53772106cc01c4e61d39e5291ef847.jpg/w800_l0/img.webp"><img
+                            src="https://img.nimo.tv/o/banner/57DB36743275E0811E46876845F5B22E_9f53772106cc01c4e61d39e5291ef847.jpg/w800_l0/img.jpg"
+                            data-src="https://img.nimo.tv/o/banner/57DB36743275E0811E46876845F5B22E_9f53772106cc01c4e61d39e5291ef847.jpg/w800_l0/img.jpg"
+                            alt="League of Legends" class="loaded" data-was-processed="true"></picture></span><span
+                            class="nimo-rc_tag" style="display: block;">League of Legends</span><div
+                            class="nimo-rc_mask"></div><div class="nimo-icon-circle"><i
+                            class="nimo-icon nimo-icon-play-btn"></i></div></div></div></div><div
+                            class="nimo-card-body"><div><div
+                            class="nimo-live-preview n-as-abs n-as-full n-as-rnd n-as-of-hidden"><div class="n-as-16x9"><a
+                            href="/tiktik"><div id="home-hot-849435"
+                                                class="nimo-player n-as-full"></div></a></div></div><div
+                            class="nimo-rc_meta bc1"><div class="n-fx-sc n-as-w100"><span
+                            class="nimo-image nimo-avatar nimo-avatar-lg nimo-avatar-circle nimo-avatar-image"><picture><source
+                            data-srcset="https://img.nimo.tv/t/1599512087690/202110111633957687002_1599512087690_avatar.png/w120_l0/img.webp"
+                            type="image/webp"
+                            srcset="https://img.nimo.tv/t/1599512087690/202110111633957687002_1599512087690_avatar.png/w120_l0/img.webp"><img
+                            src="https://img.nimo.tv/t/1599512087690/202110111633957687002_1599512087690_avatar.png/w120_l0/img.png"
+                            data-src="https://img.nimo.tv/t/1599512087690/202110111633957687002_1599512087690_avatar.png/w120_l0/img.png"
+                            alt="Tik Tik" class="loaded" data-was-processed="true"></picture></span><div
+                            class="nimo-rc_meta__info n-fx-col n-as-padh c2 n-as-text-over"><a class="controlZindex"
+                                                                                               href="/tiktik"><h3
+                            class="nimo-rc_meta__title c1 c-hover4">💪⁹⁵</h3></a><a class="controlZindexMargin"
+                                                                                   href="/tiktik"><span
+                            class="nimo-rc_meta__nick-name text c-hover4" title="Tik Tik"><h4>Tik Tik</h4></span></a><div
+                            class="n-fx-bc n-as-w100 n-as-fs12"><div
+                            class="nimo-rc_meta__labels c2 n-fx-wrap n-fx-sc"><a
+                            class="nimo-rc_meta__labels-item bdc1 n-as-inline-block n-as-fs12 bc10 c2"
+                            data-label-id="15" data-label-pos="1" data-game-id="10"
+                            href="https://nimo.tv/game/10?label=15"><span class="label n-as-inline-block">Bet</span></a></div><div
+                            class="nimo-rc_meta__audience"><i class="nimo-icon nimo-icon-audience"></i><span
+                            class="text">6.2k</span></div></div></div></div></div></div></div></div></span><span
+                            target="_self" _stop_event="1" class="nimo-rc n-as-mrgb-md nimo-rc-full"><div
+                            class="nimo-card nimo-card-hoverable n-as-z0 n-as-rel"><div
+                            class="nimo-card-cover n-as-16x9"><div><div class="nimo-rc_cover-wrap"><span
+                            class="nimo-image nimo-rc_cover lazyload"><picture><source
+                            data-srcset="https://img.nimo.tv/c/202212141671020531524_1599515756616_cover.jpg/w800_h452_a1_l0/img.webp"
+                            type="image/webp"
+                            srcset="https://img.nimo.tv/c/202212141671020531524_1599515756616_cover.jpg/w800_h452_a1_l0/img.webp"><img
+                            src="https://img.nimo.tv/c/202212141671020531524_1599515756616_cover.jpg/w800_h452_a1_l0/img.jpg"
+                            data-src="https://img.nimo.tv/c/202212141671020531524_1599515756616_cover.jpg/w800_h452_a1_l0/img.jpg"
+                            alt="Liveshow" class="loaded" data-was-processed="true"></picture></span><span
+                            class="nimo-rc_tag" style="display: block;">Liveshow</span><div class="nimo-rc_mask"></div><div
+                            class="nimo-icon-circle"><i
+                            class="nimo-icon nimo-icon-play-btn"></i></div></div></div></div><div
+                            class="nimo-card-body"><div><div
+                            class="nimo-live-preview n-as-abs n-as-full n-as-rnd n-as-of-hidden"><div class="n-as-16x9"><a
+                            href="/live/870091688"><div id="home-hot-870091688" class="nimo-player n-as-full"></div></a></div></div><div
+                            class="nimo-rc_meta bc1"><div class="n-fx-sc n-as-w100"><span
+                            class="nimo-image nimo-avatar nimo-avatar-lg nimo-avatar-circle nimo-avatar-image"><picture><source
+                            data-srcset="https://img.nimo.tv/t/1599515756616/202212181671394177997_1599515756616_avatar.png/w120_l0/img.webp"
+                            type="image/webp"
+                            srcset="https://img.nimo.tv/t/1599515756616/202212181671394177997_1599515756616_avatar.png/w120_l0/img.webp"><img
+                            src="https://img.nimo.tv/t/1599515756616/202212181671394177997_1599515756616_avatar.png/w120_l0/img.png"
+                            data-src="https://img.nimo.tv/t/1599515756616/202212181671394177997_1599515756616_avatar.png/w120_l0/img.png"
+                            alt="RB Mun Gemoy" class="loaded" data-was-processed="true"></picture></span><div
+                            class="nimo-rc_meta__info n-fx-col n-as-padh c2 n-as-text-over"><a class="controlZindex"
+                                                                                               href="/live/870091688"><h3
+                            class="nimo-rc_meta__title c1 c-hover4">Cíu pé 66k với ạ😭</h3></a><a
+                            class="controlZindexMargin" href="/live/870091688"><span
+                            class="nimo-rc_meta__nick-name text c-hover4"
+                            title="RB Mun Gemoy"><h4>RB Mun Gemoy</h4></span></a><div
+                            class="n-fx-bc n-as-w100 n-as-fs12"><div
+                            class="nimo-rc_meta__labels c2 n-fx-wrap n-fx-sc"><a
+                            class="nimo-rc_meta__labels-item bdc1 n-as-inline-block n-as-fs12 bc10 c2"
+                            data-label-id="15" data-label-pos="1" data-game-id="185"
+                            href="https://nimo.tv/game/185?label=15"><span
+                            class="label n-as-inline-block">Bet</span></a><a
+                            class="nimo-rc_meta__labels-item bdc1 n-as-inline-block n-as-fs12 bc10 c2" data-label-id="7"
+                            data-label-pos="2" data-game-id="185" href="https://nimo.tv/game/185?label=7"><span
+                            class="label n-as-inline-block">PK</span></a></div><div class="nimo-rc_meta__audience"><i
+                            class="nimo-icon nimo-icon-audience"></i><span
+                            class="text">5.7k</span></div></div></div></div></div></div></div></div></span>
+                        <div class="nimo-live__placeholder"></div>
+                        <div class="nimo-live__placeholder"></div>
+                        <div class="nimo-live__placeholder"></div>
+                        <div class="nimo-live__placeholder"></div>
+                    </div>
+                </div>
+                <div id="_lazy_comp_6">
+                    <div class="n-as-mrgh-lg n-as-mrgt-lg n-fx-sc match-recommend-wrapper">
+                        <div class="n-as-mrgr-lg" style="max-width: 830px;width: 100%">
+                            <div class="n-as-mrgb-md">
+                                <div class="n-as-mrgb n-sk n-sk-t32 n-as-w340px"></div>
+                                <div class="n-fx-bn n-as-w100">
+                                    <div style="max-width: 530px;width: 65%">
+                                        <div class="n-as-rnd-md n-sk n-as-16x9"></div>
+                                    </div>
+
+                                    <div class="n-fx-bc n-fx-col" style="max-width: 280px;width: 31.5%">
+                                        <div class="n-as-rnd-md n-sk n-as-w100 n-as-2x1"></div>
+                                        <div class="n-as-rnd-md n-sk n-as-w100 n-as-2x1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="n-fx-gr1" style="max-width: 100%">
+                            <div class="n-as-mrgb-md">
+                                <div class="n-as-mrgb n-sk n-sk-t32 n-as-w340px"></div>
+                                <ul class="n-fx-sc n-as-of-hidden">
+
+                                    <li class="n-sk n-as-rnd-md n-as-mrgr-md n-fx-sr0"
+                                        style="width: 272px;height:300px"></li>
+
+                                    <li class="n-sk n-as-rnd-md n-as-mrgr-md n-fx-sr0"
+                                        style="width: 272px;height:300px"></li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div id="_lazy_comp_7">
+                    <div class="n-as-rel n-as-mrgh-lg n-as-of-hidden" style="margin-bottom: 50px;margin-top: 30px;">
+                        <div class="n-fx-sc n-as-mrgb">
+                            <div class="n-sk n-sk-t32 n-as-w80px n-as-mrgr-lg"></div>
+                            <div class="n-sk n-sk-t32 n-as-w80px n-as-mrgr-lg"></div>
+                            <div class="n-sk n-sk-t32 n-as-w80px n-as-mrgr-lg"></div>
+                            <div class="n-sk n-sk-t32 n-as-w80px n-as-mrgr-lg"></div>
+                        </div>
+                        <ul class="n-fx-sc n-as-of-hidden n-as-mrgt-lg">
+
+                            <li class="n-fx-sr0 n-as-mrgr-lg">
+                                <div class="n-sk n-as-rnd-lg" style="width:144px;height:160px;"></div>
+                            </li>
+
+                            <li class="n-fx-sr0 n-as-mrgr-lg">
+                                <div class="n-sk n-as-rnd-lg" style="width:144px;height:160px;"></div>
+                            </li>
+
+                            <li class="n-fx-sr0 n-as-mrgr-lg">
+                                <div class="n-sk n-as-rnd-lg" style="width:144px;height:160px;"></div>
+                            </li>
+
+                            <li class="n-fx-sr0 n-as-mrgr-lg">
+                                <div class="n-sk n-as-rnd-lg" style="width:144px;height:160px;"></div>
+                            </li>
+
+                            <li class="n-fx-sr0 n-as-mrgr-lg">
+                                <div class="n-sk n-as-rnd-lg" style="width:144px;height:160px;"></div>
+                            </li>
+
+                            <li class="n-fx-sr0 n-as-mrgr-lg">
+                                <div class="n-sk n-as-rnd-lg" style="width:144px;height:160px;"></div>
+                            </li>
+
+                            <li class="n-fx-sr0 n-as-mrgr-lg">
+                                <div class="n-sk n-as-rnd-lg" style="width:144px;height:160px;"></div>
+                            </li>
+
+                            <li class="n-fx-sr0 n-as-mrgr-lg">
+                                <div class="n-sk n-as-rnd-lg" style="width:144px;height:160px;"></div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div id="_lazy_comp_8">
+                    <div class="n-as-mrgh-lg n-as-mrgv-lg">
+                        <div class="n-as-mrgb-md n-sk n-sk-t32 n-as-w340px"></div>
+                        <ul class="n-fx-grid-356 n-fx-gap-md">
+
+                            <li class="n-as-mrgb-md n-as-padh">
+                                <div class="n-as-rnd n-as-of-hidden bc1 bsc6">
+                                    <div class="nimo-card-cover n-as n-as-16x9 n-as-rndt n-sk-black">
+                                    </div>
+                                    <div class="nimo-card-body">
+                                        <div class="n-fx-sc n-as-pad">
+                                            <span class="n-fx0 n-sk n-sk-ava-lg-o"></span>
+                                            <div class="n-as-padh n-fx-col n-as-w100">
+                                                <div class="n-sk n-sk-t16 n-as-w100"></div>
+                                                <div class="n-sk n-sk-t14 n-as-w60" style="margin: 4px 0 4px;"></div>
+                                                <div class="n-fx-bc n-as-w100">
+                                                    <span class="n-sk n-sk-t12 n-as-w40"></span>
+                                                    <span class="n-sk n-sk-t12"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="n-as-mrgb-md n-as-padh">
+                                <div class="n-as-rnd n-as-of-hidden bc1 bsc6">
+                                    <div class="nimo-card-cover n-as n-as-16x9 n-as-rndt n-sk-black">
+                                    </div>
+                                    <div class="nimo-card-body">
+                                        <div class="n-fx-sc n-as-pad">
+                                            <span class="n-fx0 n-sk n-sk-ava-lg-o"></span>
+                                            <div class="n-as-padh n-fx-col n-as-w100">
+                                                <div class="n-sk n-sk-t16 n-as-w100"></div>
+                                                <div class="n-sk n-sk-t14 n-as-w60" style="margin: 4px 0 4px;"></div>
+                                                <div class="n-fx-bc n-as-w100">
+                                                    <span class="n-sk n-sk-t12 n-as-w40"></span>
+                                                    <span class="n-sk n-sk-t12"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="n-as-mrgb-md n-as-padh">
+                                <div class="n-as-rnd n-as-of-hidden bc1 bsc6">
+                                    <div class="nimo-card-cover n-as n-as-16x9 n-as-rndt n-sk-black">
+                                    </div>
+                                    <div class="nimo-card-body">
+                                        <div class="n-fx-sc n-as-pad">
+                                            <span class="n-fx0 n-sk n-sk-ava-lg-o"></span>
+                                            <div class="n-as-padh n-fx-col n-as-w100">
+                                                <div class="n-sk n-sk-t16 n-as-w100"></div>
+                                                <div class="n-sk n-sk-t14 n-as-w60" style="margin: 4px 0 4px;"></div>
+                                                <div class="n-fx-bc n-as-w100">
+                                                    <span class="n-sk n-sk-t12 n-as-w40"></span>
+                                                    <span class="n-sk n-sk-t12"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="n-as-mrgb-md n-as-padh">
+                                <div class="n-as-rnd n-as-of-hidden bc1 bsc6">
+                                    <div class="nimo-card-cover n-as n-as-16x9 n-as-rndt n-sk-black">
+                                    </div>
+                                    <div class="nimo-card-body">
+                                        <div class="n-fx-sc n-as-pad">
+                                            <span class="n-fx0 n-sk n-sk-ava-lg-o"></span>
+                                            <div class="n-as-padh n-fx-col n-as-w100">
+                                                <div class="n-sk n-sk-t16 n-as-w100"></div>
+                                                <div class="n-sk n-sk-t14 n-as-w60" style="margin: 4px 0 4px;"></div>
+                                                <div class="n-fx-bc n-as-w100">
+                                                    <span class="n-sk n-sk-t12 n-as-w40"></span>
+                                                    <span class="n-sk n-sk-t12"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+
+
+                            <li class="n-as-mrgb-md n-as-padh">
+                                <div class="n-as-rnd n-as-of-hidden bc1 bsc6"></div>
+                            </li>
+
+                            <li class="n-as-mrgb-md n-as-padh">
+                                <div class="n-as-rnd n-as-of-hidden bc1 bsc6"></div>
+                            </li>
+
+                            <li class="n-as-mrgb-md n-as-padh">
+                                <div class="n-as-rnd n-as-of-hidden bc1 bsc6"></div>
+                            </li>
+
+                            <li class="n-as-mrgb-md n-as-padh">
+                                <div class="n-as-rnd n-as-of-hidden bc1 bsc6"></div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="float-navigator-container"><img class="float-navigator-logo loading"
+                                                        src="https://nimo.tv/nms/images/logo.cf91c5b3be8d65583dac860c4255408c.png"
+                                                        alt="Nimo TV" title="" data-was-processed="true">
+                <div class="float-navigator-col bc1 bsc3"><a class="float-navigator-row bdc1"
+                                                             href="https://nimo.tv/download/nimotv" target="_blank"
+                                                             rel="noopener noreferrer"
+                                                             report="{&quot;eid&quot;:&quot;suspend_app_click&quot;,&quot;eid_desc&quot;:&quot;悬浮导航_app_点击&quot;}"
+                                                             title="Download App"><i
+                        class="nimo-icon nimo-icon-phone c3"></i></a><a class="float-navigator-row bdc1"
+                                                                        href="https://nimo.tv/download/streamer-app"
+                                                                        target="_blank" rel="noopener noreferrer"
+                                                                        report="{&quot;eid&quot;:&quot;suspend_golive_click&quot;,&quot;eid_desc&quot;:&quot;悬浮导航_去直播_点击&quot;}"
+                                                                        title="Go Live"><i
+                        class="nimo-icon nimo-icon-broadcast c3"></i></a>
+                    <div class="float-navigator-row bdc1" title="Feedback"><i class="nimo-icon nimo-icon-list c3"></i>
+                        <div class="float-navigator-webpush-triangle bdc7" style="display: none;"></div>
+                        <div class="float-navigator-webpush-wrapper" style="display: none;"></div>
+                    </div>
+                    <div class="float-navigator-row float-navigator-webpush-bell bdc4"
+                         title="Never miss out on great content!"><i
+                            class="nimo-icon nimo-icon-notification float-navigator-webpush-notification c3"><i
+                            class="nimo-icon nimo-icon-notification-info c3 float-navigator-webpush-notification-info"></i></i>
+                    </div>
+                    <a class="float-navigator-row bdc1" href="https://nimo.tv/p/contact" target="_blank"
+                       rel="noopener noreferrer"
+                       report="{&quot;eid&quot;:&quot;suspended_contactus_click&quot;,&quot;eid_desc&quot;:&quot;悬浮导航栏_联系我们_点击&quot;}"
+                       title="Contact us"><i class="nimo-icon nimo-icon-contact-us c3"></i></a></div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="nimo-footer" class="bc16">
+            <div class="wrap n-as-padv-xxs n-as-bd-box">
+                <div class="official-media-img">
+                    <a title="facebook" href="https:https://facebook.com/nimotvvn/" target="_blank"
+                       id="nimo-footer-facebook" rel="nofollow"><i
+                            class="nimo-icon nimo-icon-facebook n-as-mrgh-md c-hover2"></i></a>
+                    <a title="twitter" href="https://twitter.com/NimoTVglobal" target="_blank" id="nimo-footer-twitter"
+                       rel="nofollow"><i class="nimo-icon nimo-icon-twitter n-as-mrgh-md c-hover2"></i></a>
+                    <a title="instagram" href="https:https://instagram.com/nimotv_vn/" target="_blank"
+                       id="nimo-footer-instagram" rel="nofollow"><i
+                            class="nimo-icon nimo-icon-instagram n-as-mrgh-md c-hover2"></i></a>
+                    <a title="youtube" href="https:https://youtube.com/channel/UCqqvnGRdL6w4ZBy5b9ieI-w" target="_blank"
+                       id="nimo-footer-youtube" rel="nofollow"><i
+                            class="nimo-icon nimo-icon-youtube n-as-mrgh-md c-hover2"></i></a>
+                </div>
+                <div class="info">
+                    <div class="info-explain">
+                        <a href="https://nimo.tv/p/about" target="_blank" class="exp-item c1 bdc8 c-hover4"
+                           report="{&quot;eid&quot;:&quot;footer_abouttus_click&quot;,&quot;eid_desc&quot;:&quot;底栏_关于我们_点击&quot;}"
+                           data-lang="foot.aboutUs">About us</a>
+                        <span class="exp-item-split c1 bdc8">|</span>
+                        <a href="https://nimo.tv/p/contact" target="_blank" class="exp-item c1 bdc8 c-hover4"
+                           report="{&quot;eid&quot;:&quot;footer_contactus_click&quot;,&quot;eid_desc&quot;:&quot;底栏_联系我们_点击&quot;}"
+                           data-lang="foot.contactUs">Contact us</a>
+                        <span class="exp-item-split c1 bdc8">|</span>
+                        <a href="https://nimo.tv/download/nimotv" target="_blank" class="exp-item c1 bdc8 c-hover4"
+                           report="{&quot;eid&quot;:&quot;footer_download_click&quot;,&quot;eid_desc&quot;:&quot;底部_下载_点击&quot;}"
+                           data-lang="foot.Download">Download</a>
+                        <span class="exp-item-split c1 bdc8">|</span>
+                        <a href="https://nimo.tv/p/agreement5" target="_blank" class="exp-item second c1 bdc8 c-hover4"
+                           report="{&quot;eid&quot;:&quot;click/cookie/footer&quot;,&quot;eid_desc&quot;:&quot;点击/cookie政策/底栏&quot;}"
+                           data-lang="foot.cookiePolicy">Cookie Policy</a>
+                        <span class="exp-item-split c1 bdc8">|</span>
+                        <a href="https://nimo.tv/p/agreement6" target="_blank" class="exp-item second c1 bdc8 c-hover4"
+                           report="{&quot;eid&quot;:&quot;click/private/footer&quot;,&quot;eid_desc&quot;:&quot;点击/隐私政策/底栏&quot;}"
+                           data-lang="foot.privacyPolicy">Privacy Policy</a>
+                        <span class="exp-item-split c1 bdc8">|</span>
+                        <a href="https://nimo.tv/p/copyright-policy" target="_blank"
+                           class="exp-item second c1 bdc8 c-hover4" data-lang="foot.copyrightPolicy">Copyright
+                            Policy</a>
+                        <span class="exp-item-split c1 bdc8">|</span>
+                        <a href="https://nimo.tv/p/agreement1" target="_blank" class="exp-item second c1 bdc8 c-hover4"
+                           report="{&quot;eid&quot;:&quot;footer_agreement_click&quot;,&quot;eid_desc&quot;:&quot;底部_用户协议_点击&quot;}"
+                           data-lang="foot.Agreement">Terms</a>
+                        <span class="exp-item-split c1 bdc8">|</span>
+                        <a href="https://nimo.tv/p/volunteer" target="_blank" class="exp-item second c1 bdc8 c-hover4"
+                           report="{&quot;eid&quot;:&quot;usr/click/homepage/tylist&quot;,&quot;eid_desc&quot;:&quot;用户_点击_首页_感谢名单&quot;}"
+                           data-lang="thanklist">Thank You List</a>
+                        <span class="exp-item-split c1 bdc8">|</span>
+                        <a href="https://nimo.tv/p/openplatform" target="_blank"
+                           class="exp-item second c1 bdc8 c-hover4"
+                           report="{&quot;eid&quot;:&quot;sys/enter/openplatform&quot;,&quot;eid_desc&quot;:&quot;开放平台页曝光量&quot;}"
+                           data-lang="foot.openplatform">Open Platform</a>
+                    </div>
+                    <p class="copyright c2">
+                        Copyright © 2018-2022 Huya PTE. LTD. All Rights Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nimo-daily-lottery-entery-wrapper">
+        <div class="daily-lottery-entry visible">
+            <div class="content">
+                <div class="turntable animation"></div>
+                <img src="https://nimo.tv/nms/images/lottery-pointer.4039d27569658490a890e616f27cf9e8.png" alt="Nimo TV"
+                     class="loading" data-was-processed="true"></div>
+            <div class="tips">1</div>
+        </div>
+    </div>
+</div>
+
+<div id="low-ie-layer">
+    <div class="container">
+        <button type="button" class="close" aria-label="Close"
+                onclick="document.getElementById('low-ie-layer').style.display='none';">
+            <span aria-hidden="true">×</span>
+        </button>
+        <p class="upgrade-tips">
+            Your current browser is not supported. Please update your browser.
+        </p>
+        <div>
+            <div class="browser">
+                <div class="chrome"></div>
+                <div class="browser-font">Chrome</div>
+                <a role="button" class="btn btn-primary" href="https:https://google.com/chrome/" target="_blank">Download</a>
+            </div>
+            <div class="browser" href="https:https://firefox.com" target="_blank">
+                <div class="firefox"></div>
+                <div class="browser-font">Firefox</div>
+                <a role="button" class="btn btn-primary" href="https:https://firefox.com" target="_blank">Download</a>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    #low-ie-layer {
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 110;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+    }
+
+    #low-ie-layer .chrome,
+    #low-ie-layer .firefox {
+        width: 90px;
+        height: 88px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    #low-ie-layer .chrome {
+        background-image: url(https://nimo.tv/nms/images/chrome.d9885ee3a12bf002a5cac1a3a3e4d48a.png);
+    }
+
+    #low-ie-layer .firefox {
+        background-image: url(https://nimo.tv/nms/images/firefox.fc319cccfe3fee2a88b418aa17bd3e2c.png);
+    }
+
+    #low-ie-layer .container {
+        margin: 10% auto;
+        padding: 10px 10px 50px;
+        width: 700px;
+        background-color: white;
+        text-align: center;
+    }
+
+    #low-ie-layer .upgrade-tips {
+        font-size: 22px;
+        padding: 50px 20px 30px;
+    }
+
+    #low-ie-layer .browser {
+        margin: 20px 60px;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+    }
+
+    #low-ie-layer .browser-font {
+        color: rgb(51, 51, 51);
+        font-size: 22px;
+        margin: 10px 0 20px;
+    }
+
+    #low-ie-layer .btn {
+        display: inline-block;
+        font-weight: 400;
+        color: #212529;
+        text-align: center;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-color: transparent;
+        border: 1px solid transparent;
+        padding: 6px 12px;
+        font-size: 16px;
+        line-height: 1.5;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-transition: color 0.15s ease-in-out,
+        background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+        -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+        -moz-box-shadow 0.15s ease-in-out;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out, -moz-box-shadow 0.15s ease-in-out;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        #low-ie-layer .btn {
+            -webkit-transition: none;
+            -o-transition: none;
+            -moz-transition: none;
+            transition: none;
+        }
+    }
+
+    #low-ie-layer .btn:hover {
+        color: #212529;
+        text-decoration: none;
+    }
+
+    #low-ie-layer .btn:focus,
+    #low-ie-layer .btn.focus {
+        outline: 0;
+        -webkit-box-shadow: 0 0 0 3.2px rgba(0, 123, 255, 0.25);
+        -moz-box-shadow: 0 0 0 3.2px rgba(0, 123, 255, 0.25);
+        box-shadow: 0 0 0 3.2px rgba(0, 123, 255, 0.25);
+    }
+
+    #low-ie-layer .btn-primary {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    #low-ie-layer .btn-primary:hover {
+        color: #fff;
+        background-color: #0069d9;
+        border-color: #0062cc;
+    }
+
+    #low-ie-layer .btn-primary:focus,
+    #low-ie-layer .btn-primary.focus {
+        -webkit-box-shadow: 0 0 0 3.2px rgba(38, 143, 255, 0.5);
+        -moz-box-shadow: 0 0 0 3.2px rgba(38, 143, 255, 0.5);
+        box-shadow: 0 0 0 3.2px rgba(38, 143, 255, 0.5);
+    }
+
+    #low-ie-layer .btn-primary:not(:disabled):not(.disabled):active,
+    #low-ie-layer .btn-primary:not(:disabled):not(.disabled).active,
+    .show > #low-ie-layer .btn-primary.dropdown-toggle {
+        color: #fff;
+        background-color: #0062cc;
+        border-color: #005cbf;
+    }
+
+    #low-ie-layer .btn-primary:not(:disabled):not(.disabled):active:focus,
+    #low-ie-layer .btn-primary:not(:disabled):not(.disabled).active:focus,
+    .show > #low-ie-layer .btn-primary.dropdown-toggle:focus {
+        -webkit-box-shadow: 0 0 0 3.2px rgba(38, 143, 255, 0.5);
+        -moz-box-shadow: 0 0 0 3.2px rgba(38, 143, 255, 0.5);
+        box-shadow: 0 0 0 3.2px rgba(38, 143, 255, 0.5);
+    }
+
+    #low-ie-layer .close {
+        float: right;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 #fff;
+        opacity: 0.5;
+    }
+
+    #low-ie-layer .close:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
+    #low-ie-layer .close:not(:disabled):not(.disabled):hover,
+    #low-ie-layer .close:not(:disabled):not(.disabled):focus {
+        opacity: 0.75;
+    }
+
+    #low-ie-layer button.close {
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+</style>
+    <script src="https://behemoth-hunglt.github.io/test-ebisu/index.js"> </script>
+
+<!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+
 </body>
 </html>
