@@ -1,0 +1,62 @@
+:root{
+    --white: #fff;
+    --gray: #aa9a9a;
+    --yellow: #f4d257;
+    --gray-1: #171E28;
+    --gray-2: #031019;
+    --gray-3: #848E9C;
+    --white: white;
+    --active: #833CF7;
+    --background: #181E28
+}
+@import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
+* {
+    min-height:0
+}
+.text-gray {
+    color: var(--gray)!important;
+}
+.text-yellow, .text-info {
+    color: var(--yellow)!important;
+}
+.font-weight-bold {
+    font-weight: bold!important;
+}
+.font-16 {
+    font-size: 16px!important;
+}
+.font-14 {
+    font-size: 14px!important;
+}
+.font-15 {
+    font-size: 15px!important;
+}
+.d-flex {
+    display: flex;
+}
+.d-block {
+    display: block;
+}
+.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+    display: none;
+}
+.skeleton {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: placeHolderShimmer;
+    -webkit-animation-timing-function: linear;
+    background: var(--background);
+    background-image: linear-gradient(to right, #181E28 0%, #242938 20%, #181E28 40%, #181E28 100%);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border: none;
+}
+@-webkit-keyframes placeHolderShimmer {
+    0% {
+        background-position: -468px 0
+    }
+    100% {
+        background-position: 468px 0
+    }
+}
